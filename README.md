@@ -1,6 +1,6 @@
 # 🚀 Mini ETL - Customer Data Quality Pipeline
 
-> Projeto desenvolvido para consolidar os fundamentos da linguagem Python através da construção de um pipeline ETL para limpeza, validação e padronização de dados, utilizando apenas bibliotecas nativas da linguagem.
+> Pipeline ETL desenvolvido em Python puro para leitura, limpeza, validação, padronização e geração de relatórios de qualidade de dados a partir de arquivos CSV. Projeto criado como parte da minha jornada de formação em Engenharia de Dados, priorizando o entendimento dos fundamentos antes do uso de bibliotecas como Pandas.
 
 ---
 
@@ -32,7 +32,7 @@ Acredito que dominar os fundamentos torna o aprendizado das ferramentas muito ma
 
 O objetivo deste projeto foi simular um problema real encontrado em Engenharia de Dados:
 
-Receber um arquivo CSV contendo dados de clientes e construir um pipeline responsável por:
+Simular uma etapa de qualidade de dados presente em pipelines de Engenharia de Dados, recebendo um arquivo CSV de clientes e executando processos de leitura, limpeza, validação, transformação e geração de relatórios:
 
 - ler os dados;
 - limpar informações;
@@ -154,59 +154,23 @@ Durante este projeto consegui colocar em prática praticamente todos os assuntos
 
 ---
 
-# 🏗 Arquitetura do projeto
+# 🏗 Arquitetura do Pipeline
 
-```
-CSV
- │
- ▼
-Reader
- │
- ▼
-Cleaning
- │
- ▼
-Validation
- │
- ▼
-Phone Standardization
- │
- ▼
-Date Transformation
- │
- ▼
-Processing Report
-```
+<p align="center">
+  <img src="images/pipeline.png" alt="Pipeline do Projeto" width="1000">
+</p>
+
+O pipeline foi dividido em etapas independentes, simulando o fluxo encontrado em processos ETL reais. Cada módulo possui uma responsabilidade específica, facilitando manutenção, testes e evolução do projeto.
 
 ---
 
-# 📁 Estrutura do projeto
+# 📁 Estrutura do Projeto
 
-```
-mini-etl-clientes
-│
-├── data
-│   └── raw
-│       └── customers-100.csv
-│
-├── images
-│
-├── output
-│   └── processing_report.txt
-│
-├── src
-│   ├── cleaning.py
-│   ├── config.py
-│   ├── main.py
-│   ├── phone.py
-│   ├── reader.py
-│   ├── report.py
-│   └── validation.py
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
+<p align="center">
+  <img src="images/folder-structure.png" alt="Estrutura do Projeto" width="500">
+</p>
+
+A organização em módulos foi adotada desde o início para aproximar o projeto da estrutura encontrada em aplicações reais de Engenharia de Dados.
 
 ---
 
@@ -282,14 +246,11 @@ Foi desenvolvido um processo para:
 
 ## 📄 Relatório
 
-Ao final da execução é gerado um relatório contendo:
+Exemplo do relatório gerado automaticamente pelo pipeline.
 
-- total de registros;
-- e-mails inválidos;
-- sites inválidos;
-- datas inválidas;
-- datas inexistentes;
-- telefones contendo ramal.
+<p align="center">
+  <img src="images/processing-report.png" alt="Relatório Gerado" width="650">
+</p>
 
 ---
 
@@ -312,8 +273,11 @@ Execute:
 ```bash
 python src/main.py
 ```
+Resultado da execução:
 
-O relatório será gerado na pasta:
+<p align="center">
+  <img src="images/execution.png" alt="Execução do Projeto" width="900">
+</p>
 
 ```
 output/
@@ -406,7 +370,7 @@ Cloud Data Engineering
 
 Meu nome é **Iago Araújo dos Santos**.
 
-Sou bacharel em Ciência da Computação e atuo como Analista de Dados no Instituto Bold.
+Sou bacharel em Ciência da Computação e atuo como Analista de Dados no Instituto Bold. 
 
 Atualmente estou direcionando minha carreira para Engenharia de Dados e construindo um portfólio de projetos que simulam problemas encontrados no dia a dia da área.
 
